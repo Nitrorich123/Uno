@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <div id="main">
+        <h2>Party Chat + UNO + Photos + Censor</h2>
+        <div id="party-section">
+            <button onclick="createParty()">Create Party</button>
+            <input type="text" id="partyCode" placeholder="Enter 8-digit code">
+            <button onclick="joinParty()">Join Party</button>
+        </div>
+
+        <div id="chat-section" style="display: none;">
+            <h3>Party Code: <span id="currentCode"></span></h3>
+            <div id="chat-box"></div>
+            <input type="text" id="messageInput" placeholder="Type a message...">
+            <button onclick="sendMessage()">Send</button>
+
+            <input type="file" id="imageInput" accept="image/*">
+            <button onclick="sendImage()">Send Image</button>
+
+            <h3>UNO Game</h3>
+            <div id="uno-section">
+                <p>Current Card: <span id="currentCard">None</span></p>
+                <p>Your Cards: <span id="yourCards"></span></p>
+                <button onclick="drawCard()">Draw Card</button>
+                <input type="text" id="playCardInput" placeholder="Enter card to play">
+                <button onclick="playCard()">Play Card</button>
+                <p><strong>Turn:</strong> <span id="currentTurn"></span></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
